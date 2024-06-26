@@ -18,18 +18,18 @@ const Home = () => {
         <div className="mt-8 flex flex-row pr-4">
           <Link to="/about">
             <button
-              className="flex-row items-center mr-4 justify-center bg-yellow-400 text-gray-900 font-bold py-2 px-4 rounded transform transition-transform duration-1000 hover:shadow-black hover:shadow-lg hover:bg-blue-700 hover:text-white focus:outline-none mt-8"
+              className="items-center mr-4 justify-center bg-yellow-400 text-gray-900 font-bold py-2 px-4 rounded transform transition-transform duration-1000 hover:shadow-black hover:shadow-lg hover:bg-blue-700 hover:text-white focus:outline-none mt-8"
             >
               About-Me
-              <BsPerson className="hidden sm:ml-2" />
+              <BsPerson className="inline-block md:ml-2" />
             </button>
           </Link>
           <Link to="/contact">
             <button
-              className="flex items-center justify-center bg-yellow-400 text-gray-900 font-bold py-2 px-4 rounded transform transition-transform duration-1000 hover:shadow-black hover:shadow-lg hover:bg-blue-700 hover:text-white focus:outline-none mt-8"
+              className="items-center justify-center bg-yellow-400 text-gray-900 font-bold py-2 px-4 rounded transform transition-transform duration-1000 hover:shadow-black hover:shadow-lg hover:bg-blue-700 hover:text-white focus:outline-none mt-8"
             >
               Contact
-              <CgPhone className="hidden sm:ml-2" />
+              <CgPhone className="inline-block sm:ml-2" />
             </button>
           </Link>
         </div>

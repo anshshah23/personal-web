@@ -28,7 +28,7 @@ const Navbar = () => {
   }, []);  
 
   return (
-    <nav className={`p-4 w-full fixed top-0 z-50 transition duration-500 ease-in-out ${isScrolled ? 'bg-gray-900 bg-opacity-70' : 'bg-transparent'}`}>
+    <nav className={`navbar p-4 w-full fixed top-0 z-50 ${isScrolled ? 'opaque' : ''}`}>
       <div className="container mx-auto flex flex-row justify-between items-center">
         <div className="relative z-50">
           <Logo />

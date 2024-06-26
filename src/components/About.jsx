@@ -76,7 +76,7 @@ const About = () => {
             <button
               onClick={handleNext}
               className="p-2 bg-gray-700 text-white rounded-full hover:bg-gray-600 absolute right-0 arrow-button"
-              style={{ top: '50%', transform: 'translateY(-50%)' }}
+              style={{ top: '80%', transform: 'translateY(-50%)' }}
             >
               <FaArrowRight />
             </button>
