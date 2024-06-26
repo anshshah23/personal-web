@@ -1,17 +1,8 @@
 import React from "react";
-import { CgCPlusPlus } from "react-icons/cg";
-import {
-  FaReact,
-  FaGitAlt,
-  FaGithub,
-  FaNpm,
-  FaFigma,
-  FaBootstrap,
-  FaHtml5,
-  FaCss3,
-} from "react-icons/fa";
+import { FaHtml5, FaCss3, FaBootstrap, FaGitAlt, FaGithub, FaReact, FaNpm, FaFigma } from "react-icons/fa";
 import { DiJavascript1 } from "react-icons/di";
-import { SiTailwindcss } from "react-icons/si";
+import { SiTailwindcss, SiMongodb, SiPython, SiDjango, SiCplusplus, SiDocker, SiFirebase, SiTypescript } from "react-icons/si";
+import { CgCPlusPlus } from "react-icons/cg";
 
 const Skills = ({ skill }) => {
   const icon = {
@@ -26,6 +17,13 @@ const Skills = ({ skill }) => {
     Github: <FaGithub />,
     Npm: <FaNpm />,
     Figma: <FaFigma />,
+    MongoDB: <SiMongodb />,
+    Python: <SiPython />,
+    Django: <SiDjango />,
+    C: <SiCplusplus />,
+    Docker: <SiDocker />,
+    Firebase: <SiFirebase />,
+    TypeScript: <SiTypescript />,
   };
 
   return (

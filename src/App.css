@@ -1,18 +1,88 @@
 .fade-enter {
-    opacity: 0;
-  }
-  
-  .fade-enter-active {
-    opacity: 1;
-    transition: opacity 0.5s ease-in-out;
-  }
-  
-  .fade-exit {
-    opacity: 1;
-  }
-  
-  .fade-exit-active {
-    opacity: 0;
-    transition: opacity 0.5s ease-in-out;
-  }
-  
+  opacity: 0;
+}
+
+.fade-enter-active {
+  opacity: 1;
+  transition: opacity 1.5s ease-in-out;
+}
+
+.fade-exit {
+  opacity: 1;
+}
+
+.fade-exit-active {
+  opacity: 0;
+  transition: opacity 1.5s ease-in-out;
+}
+/* General Styles */
+.App {
+  background: linear-gradient(to bottom right, #4ade80, #172554);
+  background-attachment: fixed;
+  background-size: cover;
+  min-height: 100vh;
+  min-width: 100vw;
+  color: white;
+  overflow-x: hidden;
+}
+
+button {
+  cursor: pointer;
+}
+
+/* About Component Styles */
+.SkillsSection {
+  max-width: 800px;
+  margin: auto;
+  padding: 20px;
+  position: relative;
+}
+
+/* Carousel Styles */
+.skills-carousel {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  overflow-x: auto;
+  max-width: 100%;
+  padding: 1rem;
+}
+
+.skill-item {
+  background-color: #ffffff;
+  color: #1f2937;
+  padding: 8px 16px;
+  border-radius: 999px; /* Large value to create round shape */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Adjust shadow as needed */
+  min-width: 100px; /* Adjust minimum width as needed */
+  text-align: center;
+  white-space: nowrap; /* Prevent text wrapping */
+  overflow: hidden; /* Hide overflow text */
+  text-overflow: ellipsis; /* Show ellipsis for overflow text */
+}
+
+/* Arrow Button Styles */
+.arrow-button {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  padding: 10px;
+  background-color: rgba(0, 0, 0, 0.5);
+  color: white;
+  border: none;
+  border-radius: 50%;
+  cursor: pointer;
+  z-index: 10;
+}
+
+.arrow-button:hover {
+  background-color: rgba(0, 0, 0, 0.7);
+}
+
+.arrow-button.left {
+  left: 10px;
+}
+
+.arrow-button.right {
+  right: 10px;
+}

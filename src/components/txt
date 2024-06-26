@@ -1,64 +1,90 @@
-import React, { useState } from 'react';
-import { Link } from 'react-router-dom';
-import Logo from './Logo';
+import React, { useState } from "react";
+import '../App.css'; // Ensure you import the CSS file where the .App class is defined
+import { FaFileDownload, FaArrowLeft, FaArrowRight } from "react-icons/fa";
+import Skills from "./Skills"; 
+const About = () => {
+  const skills = [
+    ["HTML", "CSS", "JavaScript", "React", "Redux", "Tailwind CSS", "Bootstrap", "Git", "GitHub"],
+    ["Node.js", "Express", "MongoDB", "SQL", "Python", "Django", "Java", "C", "C++"],
+    ["GraphQL", "REST APIs", "Docker", "Kubernetes", "AWS", "Firebase", "Next.js", "TypeScript", "Figma"]
+  ];
 
-const Navbar = () => {
-  const [isOpen, setIsOpen] = useState(false);
+  const [currentSlide, setCurrentSlide] = React.useState(0);
 
-  const toggleMenu = () => {
-    setIsOpen(!isOpen);
+  const handleNext = () => {
+    setCurrentSlide((prevSlide) => (prevSlide + 1) % skills.length);
+  };
+
+  const handlePrev = () => {
+    setCurrentSlide((prevSlide) => (prevSlide - 1 + skills.length) % skills.length);
+  };
+
+  const handleDownload = () => {
+    const link = document.createElement("a");
+    link.href = "https://drive.google.com/uc?export=download&id=1gh1Bvc4RnGiQPMu6kejUaXr53gLAlQ8b";
+    link.download = "Ansh_Shah_Resume.pdf";
+    document.body.appendChild(link);
+    link.click();
+    document.body.removeChild(link);
   };
 
   return (
-    <nav className="bg-blue-950 p-4 w-full fixed top-0 z-50">
-      <div className="container mx-auto flex flex-row justify-between items-center">
-        <Logo />
-        <div className="md:hidden" onClick={toggleMenu}>
-          <button className="text-white focus:outline-none">
-            {isOpen ? (
-              <svg
-                className="w-6 h-6"
-                fill="none"
-                stroke="currentColor"
-                viewBox="0 0 24 24"
-                xmlns="http://www.w3.org/2000/svg"
-              >
-                <path
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  strokeWidth="2"
-                  d="M6 18L18 6M6 6l12 12"
-                ></path>
-              </svg>
-            ) : (
-              <svg
-                className="w-6 h-6"
-                fill="none"
-                stroke="currentColor"
-                viewBox="0 0 24 24"
-                xmlns="http://www.w3.org/2000/svg"
-              >
-                <path
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  strokeWidth="2"
-                  d="M4 6h16M4 12h16m-7 6h7"
-                ></path>
-              </svg>
-            )}
+    <div className="App flex flex-col md:flex-col justify-evenly items-center">
+      <section className="flex flex-col md:flex-col justify-evenly overflow-hidden items-center">
+        <div className="w-full md:w-3/5 font-medium text-lg md:text-xl leading-8 md:leading-10 tracking-wide">
+          <br />
+          <h1 className="text-3xl md:text-4xl font-semibold pb-5">
+            Get to <b>know</b> me!
+          </h1>
+          <p>
+            Hi, my name is <b>Ansh Shah</b> and I am from Mumbai, India. I'm a <b>Frontend web developer</b> and a Third-Year
+            student pursuing a <b>BTech in Computer Engineering</b>.
+            <br />
+            <br />
+            I love to create projects with beautiful designs and put my own twists on it. You can check out some of my work in the projects
+            section.
+            <br />
+            <br />
+            I am <b>open</b> to new collaborations or work where I can contribute and grow. Feel free to connect with me, links are in the
+            footer.
+            <br />
+            Apart from coding, I love to make Discord servers, design, and do photography in my spare time.
+          </p>
+          <button
+            onClick={handleDownload}
+            className="flex items-center justify-center bg-yellow-400 text-gray-900 font-bold py-2 px-4 rounded hover:shadow-black hover:shadow-lg hover:bg-blue-700 hover:text-white mt-6"
+          >
+            Download Resume <FaFileDownload className="ml-2" />
           </button>
         </div>
-        <ul className={`flex flex-col md:flex-row md:items-center md:space-x-10 ${isOpen ? 'block' : 'hidden'} md:flex-row md:flex`}>
-          <li className="my-2 md:my-0 group relative">
-              <Link to="/" className="text-white hover:text-gray-300">
-                Home
-              </Link>
-              <span className="absolute left-0 bottom-0 w-full h-0.5 bg-red-500 transform scale-x-0 group-hover:scale-x-100 transition-transform origin-center"></span>
-            </li>
-        </ul>
+      </section>
+      {/* Skills */}
+      <section className="bg-gradient-to-br from-green-400 to-blue-950 w-full py-40 text-white text-center bg-fixed">
+      <div className="w-full md:w-/5 lg:w-1/2 mx-auto">
+        <h1 className="text-4xl font-bold mb-6">Skills and Tech Stacks</h1>
+        <div className="relative flex justify-center">
+          <div className="skills-carousel">
+            {skills[currentSlide].map((skill, index) => (
+              <Skills key={index} skill={skill} />
+            ))}
+          </div>
+          <button
+            onClick={handlePrev}
+            className="absolute top-1/2 left-0 transform -translate-y-1/2 bg-white text-gray-900 p-2 rounded-full shadow-md"
+          >
+            <FaArrowLeft />
+          </button>
+          <button
+            onClick={handleNext}
+            className="absolute top-1/2 right-0 transform -translate-y-1/2 bg-white text-gray-900 p-2 rounded-full shadow-md"
+          >
+            <FaArrowRight />
+          </button>
+        </div>
       </div>
-    </nav>
+    </section>
+    </div>
   );
 };
 
-export default Navbar;
+export default About;

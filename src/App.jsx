@@ -11,9 +11,7 @@ function App() {
   return (
     <Router>
       <div className="App text-white bg-gradient-to-br bg-fixed from-green-400 to-blue-950 h-screen">
-        <header className="App-header">
-          <Navbar />
-        </header>
+        <Navbar />
         <div className="pt-16 p-4">
           <Routes>
             <Route path="/" element={<Home />} />
