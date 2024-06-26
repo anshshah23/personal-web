@@ -66,7 +66,7 @@ const About = () => {
             >
               <FaArrowLeft />
             </button>
-            <div className="skills-carousel flex overflow-x-auto max-w-full px-2">
+            <div className="skills-carousel flex overflow-x-auto min-w-full px-2">
               {skills[currentSlide].map((skill, index) => (
                 <div key={index} className="skill-item mx-2">
                   {skill}

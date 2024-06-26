@@ -16,6 +16,7 @@
   transition: opacity 1.5s ease-in-out;
 }
 /* General Styles */
+/* General Styles */
 .App {
   background: linear-gradient(to bottom right, #4ade80, #172554);
   background-attachment: fixed;
@@ -46,6 +47,25 @@ button {
   overflow-x: auto;
   max-width: 100%;
   padding: 1rem;
+}
+
+/* Scrollbar Styles */
+.skills-carousel::-webkit-scrollbar {
+  height: 8px;
+}
+
+.skills-carousel::-webkit-scrollbar-track {
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 10px;
+}
+
+.skills-carousel::-webkit-scrollbar-thumb {
+  background: rgba(0, 0, 0, 0.5);
+  border-radius: 10px;
+}
+
+.skills-carousel::-webkit-scrollbar-thumb:hover {
+  background: rgba(0, 0, 0, 0.7);
 }
 
 .skill-item {
