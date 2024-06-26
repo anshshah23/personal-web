@@ -1,5 +1,3 @@
-// App.jsx
-
 import React from 'react';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import './App.css';
@@ -12,7 +10,7 @@ import Navbar from './components/Navbar';
 function App() {
   return (
     <Router>
-      <div className="App bg-gradient-to-br from-green-400 to-blue-950 text-white h-dvh">
+      <div className="App text-white bg-gradient-to-br bg-fixed from-green-400 to-blue-950 h-screen">
         <header className="App-header">
           <Navbar />
         </header>

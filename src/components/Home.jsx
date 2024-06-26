@@ -8,7 +8,7 @@ import { CgPhone } from 'react-icons/cg';
 
 const Home = () => {
   return (
-    <div className="flex flex-col lg:pt-32 lg:pl-52 lg:mt-2 lg:flex-row items-center justify-center bg-transparent text-white">
+    <div className="flex flex-col lg:pt-32 lg:pl-52 lg:mt-2 lg:flex-row items-center justify-center bg-transparent text-white ">
       <div className="p-10 lg:w-1/2">
         <h1 className="text-2xl lg:text-5xl">Hello there!</h1>
         <h1 className='text-2xl lg:text-5xl'>I'M </h1>
