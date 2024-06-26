@@ -37,7 +37,7 @@ const Navbar = () => {
           </button>
         </div>
         <div
-          className={`${isOpen ? 'fixed inset-y-0 right-0 w-full flex flex-col items-center justify-center bg-blue-950 z-80 transition-transform duration-[4000ms] ease-in-out' : 'hidden md:flex md:flex-row md:justify-between md:items-center md:space-x-10'}`}
+          className={`${isOpen ? 'fixed inset-y-0 right-0 w-full flex flex-col items-center justify-center bg-blue-950 z-80 transition-transform duration-[1500ms] ease-in-out' : 'hidden md:flex md:flex-row md:justify-between md:items-center md:space-x-10'}`}
         >
           <div>
             <ul className="flex flex-col font-medium md:flex-row md:items-center md:space-x-10">
@@ -45,19 +45,19 @@ const Navbar = () => {
                 <Link to="/" className="hover:text-white text-xl md:text-xl text-gray-300">
                   Home
                 </Link>
-                <span className="absolute left-0 bottom-0 w-full h-0.5 bg-red-500 transform scale-x-0 group-hover:scale-x-100 transition-transform origin-left duration-1000"></span>
+                <span className="absolute left-0 bottom-0 w-full h-0.5 bg-red-500 transform scale-x-0 group-hover:scale-x-100 transition-transform origin-left duration-[1500ms]"></span>
               </li>
               <li className="my-2 md:my-0 group relative">
                 <Link to="/about" className="hover:text-white text-xl md:text-xl text-gray-300">
                   About
                 </Link>
-                <span className="absolute left-0 bottom-0 w-full h-0.5 bg-red-500 transform scale-x-0 group-hover:scale-x-100 transition-transform origin-left duration-1000"></span>
+                <span className="absolute left-0 bottom-0 w-full h-0.5 bg-red-500 transform scale-x-0 group-hover:scale-x-100 transition-transform origin-left duration-[1500ms]"></span>
               </li>
               <li className="my-2 md:my-0 group relative">
                 <Link to="/projects" className="hover:text-white text-xl md:text-xl text-gray-300">
                   Projects
                 </Link>
-                <span className="absolute left-0 bottom-0 w-full h-0.5 bg-red-500 transform scale-x-0 group-hover:scale-x-100 transition-transform origin-left duration-1000"></span>
+                <span className="absolute left-0 bottom-0 w-full h-0.5 bg-red-500 transform scale-x-0 group-hover:scale-x-100 transition-transform origin-left duration-[1500ms]"></span>
               </li>
               <li className="my-2 md:my-0 group relative md:mr-10">
                 <Link to="/contact" className="hover:text-white text-xl md:text-xl text-gray-300">
