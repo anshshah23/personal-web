@@ -29,7 +29,7 @@ const Navbar = () => {
 
   return (
     <nav
-      className={`navbar sticky top-0 z-50 w-full p-4 transition-colors duration-500 ease-in-out ${isScrolled ? 'bg-black bg-opacity-90 shadow-lg' : 'bg-gray-800 bg-opacity-0'}`}
+      className={`navbar top-0 z-50 w-full p-4 transition-colors duration-500 ease-in-out ${isScrolled ? 'bg-black bg-opacity-90 shadow-lg' : 'bg-gray-800 bg-opacity-0'}`}
     >
       <div className="container mx-auto flex flex-row justify-between items-center">
         <div className="relative z-50">

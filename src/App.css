@@ -55,7 +55,7 @@ button {
 }
 
 .skills-carousel::-webkit-scrollbar-thumb:hover {
-  background: rgba(0, 0, 0, 0.7);
+  background: rgb(255, 225, 0);
 }
 /* Main Scrollbar */
 ::-webkit-scrollbar {
