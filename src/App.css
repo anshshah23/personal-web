@@ -159,3 +159,37 @@ button {
   border-radius: 8px;
 }
 
+/* Additional CSS for responsiveness */
+.SkillsSection {
+  width: 100%;
+  max-width: screen-lg;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 5px;
+  position: relative;
+}
+
+.skill-item {
+  margin-left: 1px;
+  background-color: white;
+  color: gray-800;
+  padding: 1px;
+  padding-left: 5px;
+  border-radius: rounded-lg;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  min-width: 140px;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.arrow-button {
+  background-color: yellow-400;
+  color: black;
+  opacity: 0.7;
+  transition: opacity 0.3s ease;
+  border-radius: rounded-full;
+  padding: 2px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}

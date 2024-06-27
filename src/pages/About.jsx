@@ -12,12 +12,7 @@ const About = () => {
     ["Latex", "REST APIs", "Canva", "Wix Studio", "Firebase", "TypeScript", "MaterialUI", "Figma"]
   ];
 
-  // Refs for handling drag behavior
   const skillsCarouselRef = useRef(null);
-  const isDraggingRef = useRef(false);
-  const startPosXRef = useRef(0);
-  const scrollLeftRef = useRef(0);
-
   const [currentSlide, setCurrentSlide] = useState(0);
 
   const handleNext = () => {
@@ -61,7 +56,7 @@ const About = () => {
   };
 
   return (
-    <div className="App flex flex-col justify-center items-center px-2 pr-12 z-0">
+    <div className="App flex flex-col justify-center items-center px-2 sm:px-4 lg:px-8 pr-12 sm:pr-4 lg:pr-8 z-0">
       <section className="flex flex-col justify-evenly items-center w-full">
         <div className="w-full md:w-2/3 font-medium text-sm md:text-lg leading-6 md:leading-8 tracking-wide mb-10">
           <h1 className="text-2xl md:text-4xl font-semibold pb-10 text-center md:text-left">
@@ -87,7 +82,7 @@ const About = () => {
             Download CV <FaFileDownload className="ml-2" />
           </button>
         </div>
-        <div className="SkillsSection w-full max-w-screen-lg mx-auto p-5 relative">
+        <div className="SkillsSection w-full max-w-screen-lg mx-auto p-2 sm:p-5 relative">
           <h2 className="text-2xl font-semibold mb-4 text-center">My Skills</h2>
           <div
             ref={skillsCarouselRef}

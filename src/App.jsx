@@ -29,7 +29,7 @@ function App() {
         </div>
       ) : (
         <Router>
-          <div>
+          <div className="App text-white bg-gradient-to-br bg-fixed from-green-400 to-blue-950 h-screen">
             <Navbar />
             <div className="pt-16 p-4">
                 <Routes>
