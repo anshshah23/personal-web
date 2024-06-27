@@ -4,6 +4,7 @@ import Logo from './Logo'; // Assuming Logo component is defined elsewhere
 import InstaLogo from '../images/instagram.png';
 import GithubLogo from '../images/Github.png';
 import LinkedInLogo from '../images/LinkedIn.png';
+
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
@@ -28,7 +29,7 @@ const Navbar = () => {
   }, []);  
 
   return (
-    <nav className={`p-4 w-full top-0 z-50 ${isScrolled ? 'bg-black opacity-80' : 'bg-transparent'}`}>
+    <nav className={`p-4 w-full top-0 z-1000 ${isScrolled ? 'nav-scrolled' : 'bg-blue-950 bg-opacity-85'}`}>
       <div className="container mx-auto flex flex-row justify-between items-center">
         <div className="relative z-50">
           <Logo />
@@ -90,7 +91,7 @@ const Navbar = () => {
                 </a>
               </li>
               <li className="my-2 md:my-0 group relative">
-                <a href="https://github.com//anshshah23" target='_blank' rel='noopener noreferrer'>
+                <a href="https://github.com/anshshah23" target='_blank' rel='noopener noreferrer'>
                   <img src={GithubLogo} alt="Github" className='h-6' />
                 </a>
               </li>

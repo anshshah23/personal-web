@@ -1,4 +1,3 @@
-
 /* General Styles */
 .App {
   background: linear-gradient(to bottom right, #4ade80, #172554);
@@ -26,7 +25,6 @@ button {
   .SkillsSection {
     max-width: 700px;
   }
-  
 }
 
 /* Carousel Styles */
@@ -56,11 +54,13 @@ button {
 
 .skills-carousel::-webkit-scrollbar-thumb:hover {
   background: rgb(255, 225, 0);
+  cursor: grab;
 }
 
 .skills-carousel::-webkit-scrollbar-thumb:active {
   cursor: grabbing;
 }
+
 /* Main Scrollbar */
 ::-webkit-scrollbar {
   width: 8px;
@@ -84,13 +84,14 @@ button {
   background: rgb(255, 225, 0);
 }
 
+/* Skill Item Styles */
 .skill-item {
   background-color: #ffffff;
   color: #1f2937;
   padding: 8px 16px;
   border-radius: 999px; /* Large value to create round shape */
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Adjust shadow as needed */
-  min-width: 100px; /* Adjust minimum width as needed */
+  min-width: 140px; /* Adjust minimum width as needed */
   text-align: center;
   white-space: nowrap; /* Prevent text wrapping */
   overflow: hidden; /* Hide overflow text */
@@ -109,6 +110,13 @@ button {
   border-radius: 50%;
   cursor: pointer;
   z-index: 0;
+  width: 40px;
+  height: 40px;
+  line-height: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: opacity 0.3s ease;
 }
 
 .arrow-button:hover {
@@ -122,74 +130,17 @@ button {
 .arrow-button.right {
   right: 10px;
 }
+
 /* Navbar Styles */
-/* App.css or your preferred CSS file */  
-
-.arrow-button {
-  width: 40px;
-  height: 40px;
-  line-height: 1;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  transition: opacity 0.3s ease;
-}
-
-.skill-item {
-  /* Adjust as per your design requirements */
-  min-width: 140px;
-}
-
-.skills-carousel {
-  /* Ensure the carousel is flexible and adjusts to content */
-  display: flex;
-  min-width: 100%;
-  overflow-x: auto;
-  cursor: grab;
-}
-
-
-
-.skills-carousel::-webkit-scrollbar {
-  width: 8px;
-}
-
-.skills-carousel::-webkit-scrollbar-thumb {
-  background-color: #4a5568;
-  border-radius: 8px;
-}
-
-/* Additional CSS for responsiveness */
-.SkillsSection {
+nav {
+  position: fixed;
   width: 100%;
-  max-width: screen-lg;
-  margin-left: auto;
-  margin-right: auto;
-  padding: 5px;
-  position: relative;
-}
-
-.skill-item {
-  margin-left: 1px;
-  background-color: white;
-  color: gray-800;
-  padding: 1px;
-  padding-left: 5px;
-  border-radius: rounded-lg;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-  min-width: 140px;
-  text-align: center;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-.arrow-button {
-  background-color: yellow-400;
-  color: black;
-  opacity: 0.7;
+  z-index: 1000;
   transition: opacity 0.3s ease;
-  border-radius: rounded-full;
-  padding: 2px;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Add a class for when the navbar is scrolled */
+.nav-scrolled {
+  opacity: 0.8;
+  background-color: black;
 }

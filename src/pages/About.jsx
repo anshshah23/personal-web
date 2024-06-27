@@ -56,7 +56,7 @@ const About = () => {
   };
 
   return (
-    <div className="App flex flex-col justify-center items-center px-2 sm:px-4 lg:px-8 pr-12 sm:pr-4 lg:pr-8 z-0">
+    <div className="flex flex-col justify-center items-center px-2 sm:px-4 lg:px-8 pr-12 sm:pr-4 lg:pr-8 z-0">
       <section className="flex flex-col justify-evenly items-center w-full">
         <div className="w-full md:w-2/3 font-medium text-sm md:text-lg leading-6 md:leading-8 tracking-wide mb-10">
           <h1 className="text-2xl md:text-4xl font-semibold pb-10 text-center md:text-left">
