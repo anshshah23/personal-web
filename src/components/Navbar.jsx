@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 import Logo from './Logo'; // Assuming Logo component is defined elsewhere
 import InstaLogo from '../images/instagram.png';
 import GithubLogo from '../images/Github.png';
-
+import LinkedInLogo from '../images/LinkedIn.png';
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
@@ -92,6 +92,11 @@ const Navbar = () => {
               <li className="my-2 md:my-0 group relative">
                 <a href="https://github.com//anshshah23" target='_blank' rel='noopener noreferrer'>
                   <img src={GithubLogo} alt="Github" className='h-6' />
+                </a>
+              </li>
+              <li className="my-2 md:my-0 group relative">
+                <a href="https://linkedin.in/in/anshshah23" target='_blank' rel='noopener noreferrer'>
+                  <img src={LinkedInLogo} alt="Github" className='h-6' />
                 </a>
               </li>
             </ul>
