@@ -1,13 +1,16 @@
 import React, { useState, useRef } from "react";
 import { FaFileDownload, FaArrowLeft, FaArrowRight, FaHtml5, FaCss3, FaBootstrap, FaGitAlt, FaGithub, FaReact, FaNpm, FaFigma } from "react-icons/fa";
+import { FaJava, FaWix } from "react-icons/fa6";
 import { DiJavascript1 } from "react-icons/di";
-import { SiTailwindcss, SiMongodb, SiPython, SiDjango, SiCplusplus, SiFirebase, SiTypescript } from "react-icons/si";
+import { SiTailwindcss, SiMysql, SiMongodb, SiCanva, SiPython, SiDjango, SiCplusplus, SiFirebase, SiTypescript, SiRedux, SiMaterialdesignicons } from "react-icons/si";
+import { AiFillApi } from "react-icons/ai";
 import { CgCPlusPlus } from "react-icons/cg";
 import '../App.css';
+import MaterialUI from "../images/MaterialUILogo.png";
 
 const About = () => {
   const skills = [
-    ["HTML", "CSS", "JavaScript", "React", "Redux", "Tailwind CSS", "Bootstrap", "Git", "GitHub"],
+    [ "JavaScript", "React", "Redux", "Tailwind CSS", "Bootstrap", "Git", "GitHub"],
     ["Node.js", "Express", "MongoDB", "SQL", "Python", "Django", "Java", "C", "C++"],
     ["Latex", "REST APIs", "Canva", "Wix Studio", "Firebase", "TypeScript", "MaterialUI", "Figma"]
   ];
@@ -34,6 +37,11 @@ const About = () => {
 
   const SkillIcon = ({ skill }) => {
     const icons = {
+      MaterialUI: <SiMaterialdesignicons />,
+      Canva: <SiCanva />,
+      "Wix Studio": <FaWix />,
+      "REST APIs": <AiFillApi />,
+      SQL: <SiMysql />,
       HTML: <FaHtml5 />,
       CSS: <FaCss3 />,
       JavaScript: <DiJavascript1 />,
@@ -50,7 +58,9 @@ const About = () => {
       C: <SiCplusplus />,
       Firebase: <SiFirebase />,
       TypeScript: <SiTypescript />,
-      Figma: <FaFigma />
+      Figma: <FaFigma />,
+      Redux: <SiRedux />,
+      Java: <FaJava />,
     };
     return <div className="skill-icon text-4xl m-2">{icons[skill]}</div>;
   };

@@ -7,7 +7,7 @@ const Projects = () => {
   const projects = [
     {
       title: "Personal Portfolio",
-      description: "Welcome to my portfolio website! Built with React and Tailwind CSS, it offers a modern, responsive interface for an exceptional user experience. I focused on loading optimization, responsiveness, and custom styling. Explore my work and see the elegance and functionality in every detail.",
+      description: "Welcome to my portfolio website, a showcase of my skills as a passionate full-stack web developer. Built with React and Tailwind CSS, this site features a modern, responsive interface designed for an exceptional user experience. Throughout its development, I honed my expertise in loading optimization, responsiveness, and custom styling, including custom scrollbars.",
       imgSrc: Portfolio,
       imgAlt: "Personal Portfolio Image",
       projLink: "https://anshshah2303.vercel.app/",

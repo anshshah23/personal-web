@@ -29,7 +29,7 @@ const Navbar = () => {
   }, []);  
 
   return (
-    <nav className={`p-4 w-full top-0 z-1000 ${isScrolled ? 'nav-scrolled' : 'bg-blue-950 bg-opacity-85'}`}>
+    <nav className={`p-4 w-full top-0 z-1000 ${isScrolled ? 'nav-scrolled' : 'bg-blue-950 bg-opacity-65'}`}>
       <div className="container mx-auto flex flex-row justify-between items-center">
         <div className="relative z-50">
           <Logo />
@@ -58,25 +58,25 @@ const Navbar = () => {
           <div>
             <ul className="flex flex-col font-bold md:flex-row md:items-center md:space-x-10">
               <li className="my-2 md:my-0 group relative" onClick={() => setIsOpen(false)}>
-                <Link to="/" className="hover:text-white text-xl md:text-xl text-gray-300">
+                <Link to="/" className="hover:text-yellow-400 text-xl md:text-xl text-white">
                   Home
                 </Link>
                 <span className="absolute left-0 bottom-0 w-full h-0.5 bg-red-500 transform scale-x-0 group-hover:scale-x-100 transition-transform origin-left duration-1000"></span>
               </li>
               <li className="my-2 md:my-0 group relative" onClick={() => setIsOpen(false)}>
-                <Link to="/about" className="hover:text-white text-xl md:text-xl text-gray-300">
+                <Link to="/about" className="hover:text-yellow-400 text-xl md:text-xl text-white">
                   About
                 </Link>
                 <span className="absolute left-0 bottom-0 w-full h-0.5 bg-red-500 transform scale-x-0 group-hover:scale-x-100 transition-transform origin-left duration-1000"></span>
               </li>
               <li className="my-2 md:my-0 group relative" onClick={() => setIsOpen(false)}>
-                <Link to="/projects" className="hover:text-white text-xl md:text-xl text-gray-300">
+                <Link to="/projects" className="hover:text-yellow-400 text-xl md:text-xl text-white">
                   Projects
                 </Link>
                 <span className="absolute left-0 bottom-0 w-full h-0.5 bg-red-500 transform scale-x-0 group-hover:scale-x-100 transition-transform origin-left duration-1000"></span>
               </li>
               <li className="my-2 md:my-0 group relative md:mr-10" onClick={() => setIsOpen(false)}>
-                <Link to="/contact" className="hover:text-white text-xl md:text-xl text-gray-300">
+                <Link to="/contact" className="hover:text-yellow-400 text-xl md:text-xl text-white">
                   Contact
                 </Link>
                 <span className="absolute left-0 bottom-0 w-full h-0.5 bg-red-500 transform scale-x-0 group-hover:scale-x-100 transition-transform origin-left duration-1000"></span>
@@ -87,17 +87,17 @@ const Navbar = () => {
             <ul className="flex flex-col mt-4 md:mt-0 md:flex-row md:items-center md:space-x-10">
               <li className="my-2 md:my-0 group relative">
                 <a href="https://instagram.com/anshshah.79" target="_blank" rel="noopener noreferrer">
-                  <img src={InstaLogo} alt="Instagram" className="h-6" />
+                  <img src={InstaLogo} alt="Instagram" className="h-6 shadow-sm rounded-md hover:shadow-white" />
                 </a>
               </li>
               <li className="my-2 md:my-0 group relative">
                 <a href="https://github.com/anshshah23" target='_blank' rel='noopener noreferrer'>
-                  <img src={GithubLogo} alt="Github" className='h-6' />
+                  <img src={GithubLogo} alt="Github" className='h-6 shadow-sm rounded-full hover:shadow-white' />
                 </a>
               </li>
               <li className="my-2 md:my-0 group relative">
                 <a href="https://linkedin.in/in/anshshah23" target='_blank' rel='noopener noreferrer'>
-                  <img src={LinkedInLogo} alt="Github" className='h-6' />
+                  <img src={LinkedInLogo} alt="Github" className='h-6 rounded-lg shadow-sm hover:shadow-white' />
                 </a>
               </li>
             </ul>
