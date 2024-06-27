@@ -1,9 +1,9 @@
 import React from 'react'
-import LogoImg from '../images/logo.png'
+import LogoImg2 from '../images/logo2.png'
 const Logo = () => {
   return (
     <div className='flex cursor-auto'>
-      <img src={LogoImg} alt="" className='h-10' />
+      <img src={LogoImg2} alt="" className='h-10' />
       <p className='font-bold text-white text-3xl'>Ansh</p>
     </div>
   )

@@ -45,7 +45,7 @@ function ContactForm() {
         errors={state.errors}
         className="text-red-500"
       />
-      <button type="submit" disabled={state.submitting} className="w-full bg-blue-500 hover:bg-white text-white hover:text-blue-500 font-bold py-2 px-4 rounded mt-4 focus:outline-none">
+      <button type="submit" disabled={state.submitting} className="flex w-full items-center justify-center bg-yellow-400 text-gray-900 font-bold py-2 px-4 rounded hover:shadow-black hover:shadow-lg hover:bg-blue-700 hover:text-white focus:outline-none mt-8 mx-auto md:mx-0">
         {state.submitting ? 'Submitting...' : 'Submit'}
       </button>
     </form>

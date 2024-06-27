@@ -1,21 +1,4 @@
-.fade-enter {
-  opacity: 0;
-}
 
-.fade-enter-active {
-  opacity: 1;
-  transition: opacity 1.5s ease-in-out;
-}
-
-.fade-exit {
-  opacity: 1;
-}
-
-.fade-exit-active {
-  opacity: 0;
-  transition: opacity 1.5s ease-in-out;
-}
-/* General Styles */
 /* General Styles */
 .App {
   background: linear-gradient(to bottom right, #4ade80, #172554);
@@ -39,6 +22,13 @@ button {
   position: relative;
 }
 
+@media screen and (max-width: 768px) {
+  .SkillsSection {
+    max-width: 700px;
+  }
+  
+}
+
 /* Carousel Styles */
 .skills-carousel {
   display: flex;
@@ -49,23 +39,45 @@ button {
   padding: 1rem;
 }
 
-/* Scrollbar Styles */
+/* Custom scrollbar styles */
 .skills-carousel::-webkit-scrollbar {
-  height: 8px;
+  height: 6px;
 }
 
 .skills-carousel::-webkit-scrollbar-track {
   background: rgba(255, 255, 255, 0.1);
-  border-radius: 10px;
+  border-radius: 6px;
 }
 
 .skills-carousel::-webkit-scrollbar-thumb {
   background: rgba(0, 0, 0, 0.5);
-  border-radius: 10px;
+  border-radius: 6px;
 }
 
 .skills-carousel::-webkit-scrollbar-thumb:hover {
   background: rgba(0, 0, 0, 0.7);
+}
+/* Main Scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: rgba(255, 255, 255, 0.433);
+  border-radius: 6px;
+}
+
+::-webkit-scrollbar-track:hover {
+  background: rgba(0, 0, 0, 0.433);
+}
+
+::-webkit-scrollbar-thumb {
+  background: rgba(0, 0, 0, 0.7);
+  border-radius: 6px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: rgb(255, 225, 0);
 }
 
 .skill-item {
@@ -107,10 +119,3 @@ button {
   right: 10px;
 }
 /* Navbar Styles */
-.navbar {
-  transition: background-color 0.5s ease;
-}
-
-.navbar.opaque {
-  background-color: rgba(0, 0, 0, 0.9); /* Adjust opacity and color as needed */
-}
