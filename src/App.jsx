@@ -9,7 +9,6 @@ import About from './pages/About';
 import Projects from './pages/Projects';
 import ContactForm from './pages/ContactForm';
 
-
 function App() {
   const [loading, setLoading] = useState(true);
 
@@ -25,14 +24,8 @@ function App() {
   return (
     <div className="App text-white bg-gradient-to-br bg-fixed from-green-400 to-blue-950 h-screen">
       {loading ? (
-        <div className="loader flex justify-center items-center h-screen bg-gradient-to-br from-green-400 to-blue-950">
-          <CircleLoader
-            color={"#011c38"}
-            loading={true}
-            size={100}
-            aria-label="Loading Spinner"
-            data-testid="loader"
-          />
+        <div className="flex justify-center items-center h-screen">
+          <CustomLoader />
         </div>
       ) : (
         <Router>

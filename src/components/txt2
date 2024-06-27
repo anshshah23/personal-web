@@ -11,3 +11,11 @@
         </div>
       </div>
     </Router>
+
+    <CircleLoader
+            color={"#011c38"}
+            loading={true}
+            size={100}
+            aria-label="Loading Spinner"
+            data-testid="loader"
+          />
