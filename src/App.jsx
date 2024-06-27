@@ -37,16 +37,14 @@ function App() {
       ) : (
         <Router>
           <div>
-            <div className="overflow-y-scroll">
-              <Navbar />
-            </div>
+            <Navbar />
             <div className="pt-16 p-4">
-              <Routes>
-                <Route path="/" element={<Home />} />
-                <Route path="/about" element={<About />} />
-                <Route path="/projects" element={<Projects />} />
-                <Route path="/contact" element={<ContactForm />} />
-              </Routes>
+                <Routes>
+                  <Route path="/" element={<Home />} />
+                  <Route path="/about" element={<About />} />
+                  <Route path="/projects" element={<Projects />} />
+                  <Route path="/contact" element={<ContactForm />} />
+                </Routes>
             </div>
           </div>
         </Router>
