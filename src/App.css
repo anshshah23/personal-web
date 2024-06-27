@@ -57,6 +57,10 @@ button {
 .skills-carousel::-webkit-scrollbar-thumb:hover {
   background: rgb(255, 225, 0);
 }
+
+.skills-carousel::-webkit-scrollbar-thumb:active {
+  cursor: grabbing;
+}
 /* Main Scrollbar */
 ::-webkit-scrollbar {
   width: 8px;
@@ -104,7 +108,7 @@ button {
   border: none;
   border-radius: 50%;
   cursor: pointer;
-  z-index: 10;
+  z-index: 0;
 }
 
 .arrow-button:hover {
@@ -119,3 +123,39 @@ button {
   right: 10px;
 }
 /* Navbar Styles */
+/* App.css or your preferred CSS file */  
+
+.arrow-button {
+  width: 40px;
+  height: 40px;
+  line-height: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: opacity 0.3s ease;
+}
+
+.skill-item {
+  /* Adjust as per your design requirements */
+  min-width: 140px;
+}
+
+.skills-carousel {
+  /* Ensure the carousel is flexible and adjusts to content */
+  display: flex;
+  min-width: 100%;
+  overflow-x: auto;
+  cursor: grab;
+}
+
+
+
+.skills-carousel::-webkit-scrollbar {
+  width: 8px;
+}
+
+.skills-carousel::-webkit-scrollbar-thumb {
+  background-color: #4a5568;
+  border-radius: 8px;
+}
+

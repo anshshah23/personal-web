@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useRef } from "react";
 import { FaFileDownload, FaArrowLeft, FaArrowRight, FaHtml5, FaCss3, FaBootstrap, FaGitAlt, FaGithub, FaReact, FaNpm, FaFigma } from "react-icons/fa";
 import { DiJavascript1 } from "react-icons/di";
 import { SiTailwindcss, SiMongodb, SiPython, SiDjango, SiCplusplus, SiFirebase, SiTypescript } from "react-icons/si";
@@ -12,17 +12,11 @@ const About = () => {
     ["Latex", "REST APIs", "Canva", "Wix Studio", "Firebase", "TypeScript", "MaterialUI", "Figma"]
   ];
 
-  const SMskills = [
-    ["HTML", "CSS", "JavaScript" ],
-    ["React", "Redux", "Tailwind CSS"],
-    ["Bootstrap", "Git", "GitHub"],
-    ["Node.js", "Express", "MongoDB"],
-    ["SQL", "Python", "Django"],
-    ["Java", "C", "C++"],
-    ["Latex", "REST APIs", "Canva"],
-    ["Wix Studio", "Firebase", "TypeScript"],
-    ["MaterialUI", "Figma"]
-  ];
+  // Refs for handling drag behavior
+  const skillsCarouselRef = useRef(null);
+  const isDraggingRef = useRef(false);
+  const startPosXRef = useRef(0);
+  const scrollLeftRef = useRef(0);
 
   const [currentSlide, setCurrentSlide] = useState(0);
 
@@ -69,21 +63,20 @@ const About = () => {
   return (
     <div className="App flex flex-col justify-center items-center px-2 pr-12 z-0">
       <section className="flex flex-col justify-evenly items-center w-full">
-        <div className="w-full md:w-2/3 font-medium text-sm md:text-lg leading-6 md:leading-8 tracking-wide mb-6">
-          <h1 className="text-2xl md:text-4xl font-semibold pb-5 text-center md:text-left">
-            Get to <b>know</b> me!
+        <div className="w-full md:w-2/3 font-medium text-sm md:text-lg leading-6 md:leading-8 tracking-wide mb-10">
+          <h1 className="text-2xl md:text-4xl font-semibold pb-10 text-center md:text-left">
+            Get to <b className="text-yellow-400">know</b> me!
           </h1>
           <p className="text-left">
             Hi, my name is <b className="text-yellow-400">Ansh Shah</b> and I am from Mumbai, India. I'm a <b className="text-yellow-400">Frontend web developer</b> and a Third-Year
             student pursuing a <b className="text-yellow-400">BTech in Computer Engineering</b>.
             <br />
             <br />
-            I love to create projects with beautiful designs and put my own twists on it. You can check out some of my work in the projects
-            section.
+            I love to create projects with beautiful designs and apply my own touch to them. You can check out some of my work in the projects
+            section. Proficient in diverse technologies, seeking opportunities to innovate and contribute effectively to projects.
             <br />
             <br />
-            I am <b className="text-yellow-400">open</b> to new collaborations or work where I can contribute and grow. Feel free to connect with me, links are in the
-            footer.
+            I am <b className="text-yellow-400">open</b> to new collaborations or work where I can contribute and grow. Feel free to connect with me, links are on the navigation bar.
             <br />
             Apart from coding, I love to make Discord servers, design, and do photography in my spare time.
           </p>
@@ -96,14 +89,17 @@ const About = () => {
         </div>
         <div className="SkillsSection w-full max-w-screen-lg mx-auto p-5 relative">
           <h2 className="text-2xl font-semibold mb-4 text-center">My Skills</h2>
-          <div className="relative w-full flex justify-center items-center mb-4">
+          <div
+            ref={skillsCarouselRef}
+            className="relative w-full flex justify-center items-center mb-4"
+          >
             <button
               onClick={handlePrev}
               className="arrow-button left bg-yellow-400 text-black opacity-70 hover:opacity-100 rounded-full p-2 shadow-md hover:bg-gray-400 focus:outline-none"
             >
               <FaArrowLeft />
             </button>
-            <div className="skills-carousel flex min-w-full px-2 justify-center overflow-x-auto scrollbar-thin scrollbar-thumb-gray-700 scrollbar-track-gray-300">
+            <div className="skills-carousel flex min-w-full px-2 justify-center overflow-x-auto">
               {skills[currentSlide].map((skill, index) => (
                 <div key={index} className="skill-item mx-1 bg-white text-gray-800 p-1 px-5 rounded-lg shadow-md min-w-[140px] text-center flex items-center justify-center">
                   <SkillIcon skill={skill} />
