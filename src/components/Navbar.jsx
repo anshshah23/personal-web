@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
-import Logo from './Logo'; // Assuming Logo component is defined elsewhere
+import Logo from './Logo';
 import InstaLogo from '../images/instagram.png';
 import GithubLogo from '../images/Github.png';
 import LinkedInLogo from '../images/LinkedIn.png';

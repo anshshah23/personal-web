@@ -141,6 +141,7 @@ nav {
 
 /* Add a class for when the navbar is scrolled */
 .nav-scrolled {
+  scroll-behavior: smooth;
   opacity: 0.8;
   background-color: black;
 }
