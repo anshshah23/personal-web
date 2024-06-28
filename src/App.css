@@ -94,7 +94,7 @@ button {
   min-width: 140px; /* Adjust minimum width as needed */
   text-align: center;
   white-space: nowrap; /* Prevent text wrapping */
-  overflow: hidden; /* Hide overflow text */
+  flex-grow: 1; /* Hide overflow text */
   text-overflow: ellipsis; /* Show ellipsis for overflow text */
 }
 
@@ -139,9 +139,11 @@ nav {
   transition: opacity 0.3s ease;
 }
 
-/* Add a class for when the navbar is scrolled */
 .nav-scrolled {
-  scroll-behavior: smooth;
   opacity: 0.8;
   background-color: black;
+}
+
+.bg-opacity-65 {
+  background-color: rgba(13, 25, 95, 0.65);
 }

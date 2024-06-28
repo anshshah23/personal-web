@@ -1,6 +1,6 @@
 import React from 'react';
 import { useForm, ValidationError } from '@formspree/react';
-
+import '../components/styles/ContactForm.css';
 function ContactForm() {
   const [state, handleSubmit] = useForm("xrbzzjzq");
   
@@ -47,7 +47,7 @@ function ContactForm() {
         errors={state.errors}
         className="text-red-500"
       />
-      <button type="submit" disabled={state.submitting} className="w-full items-center justify-center bg-yellow-400 text-gray-900 font-bold py-2 px-4 rounded transform transition-transform duration-1000 hover:shadow-black hover:shadow-lg hover:bg-blue-700 hover:text-white focus:outline-none mt-8">
+      <button type="submit" disabled={state.submitting} className="contact-button w-full items-center justify-center ">
         {state.submitting ? 'Submitting...' : 'Submit'}
       </button>
     </form>

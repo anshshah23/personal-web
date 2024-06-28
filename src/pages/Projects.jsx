@@ -2,7 +2,6 @@ import React from "react";
 import ProjectBox from "../components/ProjectBox"; // Adjust the path as needed
 import Noteng from "../images/Noteng.png";
 import Portfolio from "../images/Portfolio.png";
-
 const Projects = () => {
   const projects = [
     {

@@ -1,0 +1,26 @@
+logo-button {
+    color: white;
+    text-decoration: none;
+    font-size: 25px;
+    border: none;
+    background: none;
+    font-weight: 600;
+    font-family: 'Poppins', sans-serif;
+  }
+  
+  logo-button::before {
+    margin-left: auto;
+  }
+  
+  logo-button::after, logo-button::before {
+    content: '';
+    width: 0%;
+    height: 2px;
+    background: #f44336;
+    display: block;
+    transition: 0.5s;
+  }
+  
+  logo-button:hover::after, logo-button:hover::before {
+    width: 100%;
+  }
