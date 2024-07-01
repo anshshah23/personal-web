@@ -1,53 +1,26 @@
 import React, { useState, useRef, useEffect } from "react";
 import {
-  FaFileDownload,
-  FaArrowLeft,
-  FaArrowRight,
-  FaHtml5,
-  FaCss3,
-  FaBootstrap,
-  FaGitAlt,
-  FaGithub,
-  FaReact,
-  FaNpm,
-  FaFigma,
-  FaJava,
-  FaWix
-} from "react-icons/fa";
+  FaFileDownload,FaHtml5,FaCss3,FaBootstrap,FaGitAlt,FaGithub,FaReact,FaNpm,FaFigma,FaJava,FaWix} from "react-icons/fa";
 import { DiJavascript1, DiNodejs } from "react-icons/di";
 import {
-  SiTailwindcss,
-  SiMysql,
-  SiMongodb,
-  SiCanva,
-  SiPython,
-  SiDjango,
-  SiCplusplus,
-  SiFirebase,
-  SiTypescript,
-  SiRedux,
-  SiMaterialdesignicons,
-  SiExpress,
-  SiLatex,
-} from "react-icons/si";
+  SiTailwindcss,SiMysql,SiMongodb,SiCanva,SiPython,SiDjango,SiCplusplus,SiFirebase,SiTypescript,SiRedux,SiMaterialdesignicons,SiExpress,SiLatex,SiVite,} from "react-icons/si";
 import { AiFillApi } from "react-icons/ai";
 import { CgCPlusPlus } from "react-icons/cg";
 import '../components/styles/About.css';
 
 const About = () => {
   const skills = [
-    ["Redux", "Tailwind CSS", "Bootstrap", "Git"],
-    ["Node.js", "MongoDB", "SQL", "Python"],
-    ["Java", "C", "C++", "GitHub"],
-    ["Latex", "REST APIs", "Canva", "Express"],
-    ["Wix Studio", "Firebase", "TypeScript"],
-    ["Django", "MaterialUI", "Figma"],
-    ["JavaScript", "React", "HTML", "CSS"]
+    ["MaterialUI", "Tailwind CSS", "Bootstrap","HTML", "CSS", "JavaScript"],
+    ["Git", "GitHub", "NPM","React", "Redux", "TypeScript"],
+    ["Node.js", "MongoDB", "SQL","Java", "C", "C++"],
+    ["Latex", "REST APIs", "Vite","Wix Studio", "Figma", "Canva"],
+    ["Django", "Redux", "Firebase"],
   ];
 
   const skillsCarouselRef = useRef(null);
   const [currentSlide, setCurrentSlide] = useState(0);
   const [isMobile, setIsMobile] = useState(false);
+  const [fade, setFade] = useState(false);
 
   useEffect(() => {
     const handleResize = () => {
@@ -61,12 +34,20 @@ const About = () => {
     };
   }, []);
 
-  const handleNext = () => {
-    setCurrentSlide((prevSlide) => (prevSlide + 1) % skills.length);
-  };
+  useEffect(() => {
+    const interval = setInterval(() => {
+      handleNext();
+    }, 3000); // Scroll every 3 seconds
 
-  const handlePrev = () => {
-    setCurrentSlide((prevSlide) => (prevSlide - 1 + skills.length) % skills.length);
+    return () => clearInterval(interval);
+  }, []);
+
+  const handleNext = () => {
+    setFade(true);
+    setTimeout(() => {
+      setCurrentSlide((prevSlide) => (prevSlide + 1) % skills.length);
+      setFade(false);
+    }, 500);
   };
 
   const handleDownload = () => {
@@ -80,33 +61,7 @@ const About = () => {
 
   const SkillIcon = ({ skill }) => {
     const icons = {
-      "Node.js": <FaNpm />,
-      MaterialUI: <SiMaterialdesignicons />,
-      Canva: <SiCanva />,
-      "Wix Studio": <FaWix />,
-      "REST APIs": <AiFillApi />,
-      SQL: <SiMysql />,
-      HTML: <FaHtml5 />,
-      CSS: <FaCss3 />,
-      JavaScript: <DiJavascript1 />,
-      Bootstrap: <FaBootstrap />,
-      "Tailwind CSS": <SiTailwindcss />,
-      "C++": <CgCPlusPlus />,
-      React: <FaReact />,
-      Git: <FaGitAlt />,
-      GitHub: <FaGithub />,
-      MongoDB: <SiMongodb />,
-      Python: <SiPython />,
-      Django: <SiDjango />,
-      C: <SiCplusplus />,
-      Firebase: <SiFirebase />,
-      TypeScript: <SiTypescript />,
-      Figma: <FaFigma />,
-      Redux: <SiRedux />,
-      Java: <FaJava />,
-      "Node.js": <DiNodejs />,
-      Express: <SiExpress />,
-      Latex: <SiLatex />,
+      "Node.js": <FaNpm />,MaterialUI: <SiMaterialdesignicons />,Canva: <SiCanva />,"Wix Studio": <FaWix />,"REST APIs": <AiFillApi />,SQL: <SiMysql />,HTML: <FaHtml5 />,CSS: <FaCss3 />,JavaScript: <DiJavascript1 />,Bootstrap: <FaBootstrap />,"Tailwind CSS": <SiTailwindcss />,"C++": <CgCPlusPlus />,React: <FaReact />,Git: <FaGitAlt />,GitHub: <FaGithub />,MongoDB: <SiMongodb />,Python: <SiPython />,Django: <SiDjango />,C: <SiCplusplus />,Firebase: <SiFirebase />,TypeScript: <SiTypescript />,Figma: <FaFigma />,Redux: <SiRedux />,Java: <FaJava />,"Node.js": <DiNodejs />,Express: <SiExpress />,Latex: <SiLatex />,Vite: <SiVite />, NPM: <FaNpm />
     };
     return <div className="skill-icon text-4xl m-2">{icons[skill]}</div>;
   };
@@ -143,28 +98,19 @@ const About = () => {
           <h2 className="text-2xl font-semibold mb-4 text-center">My Skills</h2>
           <div
             ref={skillsCarouselRef}
-            className={`relative w-full flex flex-col justify-center items-center mb-4 ${isMobile ? 'overflow-x-auto' : ''}`}
+            className={`relative w-full flex flex-col justify-center items-center mb-4 ${isMobile ? 'overflow-x-auto scrollbar-hide' : ''}`}
           >
-            <button
-              onClick={handlePrev}
-              className="arrow-button left bg-yellow-400 text-black opacity-70 hover:opacity-100 rounded-full p-2 shadow-md hover:bg-gray-400 focus:outline-none mx-2 sm:mx-4"
-            >
-              <FaArrowLeft />
-            </button>
-            <div className={`skills-carousel flex ${isMobile ? 'min-w-full' : 'min-w-[70%]'} px-2 sm:px-4 justify-center ${isMobile ? 'overflow-x-auto' : ''}`}>
+            <div className={`skills-carousel grid grid-flow-row grid-cols-3 ${isMobile ? 'min-w-full' : 'min-w-[80%]'} px-2 sm:px-4 justify-center ${isMobile ? 'overflow-x-scroll' : ''}`} onClick={handleNext}>
               {skills[currentSlide].map((skill, index) => (
-                <div key={index} className={`skill-item mx-1 sm:mx-2 bg-white text-gray-800 p-1 sm:p-2 px-4 sm:px-6 rounded-full shadow-md min-w-[80px] sm:min-w-[160px] text-center flex items-center justify-center ${isMobile ? 'flex-col items-center mb-2' : ''}`}>
+                <div
+                  key={index}
+                  className={`skill-item mx-1 sm:mx-2 bg-white text-gray-800 p-1 sm:p-2 px-4 sm:px-6 rounded-full shadow-md min-w-[80px] sm:min-w-[160px] text-center flex items-center justify-center ${isMobile ? 'flex-col items-center mb-2' : ''} transition-opacity duration-500 ${fade ? 'opacity-0' : 'opacity-100'}`}
+                >
                   <SkillIcon skill={skill} />
                   {!isMobile && <span className="ml-1 sm:ml-2 whitespace-nowrap">{skill}</span>}
                 </div>
               ))}
             </div>
-            <button
-              onClick={handleNext}
-              className="arrow-button right bg-yellow-400 text-black opacity-70 hover:opacity-100 rounded-full p-2 shadow-md hover:bg-gray-400 focus:outline-none mx-2 sm:mx-4"
-            >
-              <FaArrowRight />
-            </button>
           </div>
         </div>
       </section>

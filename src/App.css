@@ -37,9 +37,16 @@ button {
   padding: 1rem;
 }
 
+@media screen and (max-width: 480px){
+  .skills-carousel {
+    flex-direction: column;
+    gap: 10px;
+  }
+}
+
 /* Custom scrollbar styles */
 .skills-carousel::-webkit-scrollbar {
-  height: 6px;
+  display: none;
 }
 
 .skills-carousel::-webkit-scrollbar-track {
@@ -63,7 +70,16 @@ button {
 
 /* Main Scrollbar */
 ::-webkit-scrollbar {
-  width: 8px;
+  display: none;
+}
+
+
+@media screen and (max-width: 480px){
+  
+::-webkit-scrollbar {
+  display: block;
+  width: 6px;
+}
 }
 
 ::-webkit-scrollbar-track {
@@ -89,9 +105,9 @@ button {
   background-color: #ffffff;
   color: #1f2937;
   padding: 8px 16px;
-  border-radius: 999px; /* Large value to create round shape */
+  border-radius: 500px; /* Large value to create round shape */
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Adjust shadow as needed */
-  min-width: 140px; /* Adjust minimum width as needed */
+  min-width: 100px; /* Adjust minimum width as needed */
   text-align: center;
   white-space: nowrap; /* Prevent text wrapping */
   flex-grow: 1; /* Hide overflow text */
@@ -147,3 +163,11 @@ nav {
 .bg-opacity-65 {
   background-color: rgba(13, 25, 95, 0.65);
 }
+.scrollbar-hide::-webkit-scrollbar {
+  display: none;
+}
+
+.scrollbar-hide {
+  -ms-overflow-style: none;
+}
+ 

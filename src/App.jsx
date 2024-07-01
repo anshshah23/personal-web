@@ -29,39 +29,19 @@ function App() {
           <CustomLoader3 />
         </div>
       ) : (
-        <div className="App text-white bg-gradient-to-br bg-fixed from-green-400 to-blue-950 h-screen">
+        <>
           <Navbar />
           <div className="pt-24 p-4">
             <Suspense fallback={<div className='flex cursor-none justify-center items-center'><CustomLoader3 color="#fff" loading={true} size={150} /></div>}>
               <Routes>
-                <Route
-                  path="/"
-                  element={
-                      <Home />
-                  }
-                />
-                <Route
-                  path="/about"
-                  element={
-                      <About />
-                  }
-                />
-                <Route
-                  path="/projects"
-                  element={
-                      <Projects />
-                  }
-                />
-                <Route
-                  path="/contact"
-                  element={
-                      <ContactForm />
-                  }
-                />
+                <Route path="/" element={<Home />} />
+                <Route path="/about" element={<About />} />
+                <Route path="/projects" element={<Projects />} />
+                <Route path="/contact" element={<ContactForm />} />
               </Routes>
             </Suspense>
           </div>
-        </div>
+        </>
       )}
     </div>
   );
