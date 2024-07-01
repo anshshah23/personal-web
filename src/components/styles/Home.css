@@ -1,6 +1,6 @@
 .home-button {
     padding: 10px 25px;
-    margin-top: 30px;
+    margin-top: 40px;
     border: unset;
     border-radius: 5px;
     color: #000000;
@@ -9,13 +9,15 @@
     position: relative;
     font-weight: 1000;
     font-size: 17px;
-    -webkit-box-shadow: 4px 8px 19px -3px rgba(0, 0, 0, 0.27);
-    box-shadow: 4px 8px 19px -3px rgba(0, 0, 0, 0.27);
-    transition: all 800ms;
+    -webkit-box-shadow: 4px 8px 19px -3px rgba(0,0,0,0.27);
+    box-shadow: 4px 8px 19px -3px rgba(0,0,0,0.27);
+    transition: all 1400ms;
     overflow: hidden;
-}
-
-.home-button::before {
+    align-items: center;
+    justify-content: center;
+   }
+   
+   .home-button::before {
     content: "";
     position: absolute;
     top: 0;
@@ -25,16 +27,15 @@
     border-radius: 5px;
     background-color: #212121;
     z-index: -1;
-    -webkit-box-shadow: 4px 8px 19px -3px rgba(0, 0, 0, 0.27);
-    box-shadow: 4px 10px 22px -3px rgba(0, 0, 0, 0.27);
-    transition: all 800ms
-}
-
-.home-button:hover {
+    -webkit-box-shadow: 4px 8px 19px -3px rgba(0,0,0,0.27);
+    box-shadow: 4px 14px 19px -3px rgba(0,0,0,0.87);
+    transition: all 1400ms;
+   }
+   
+   .home-button:hover {
     color: #e8e8e8;
-}
-
-.home-button:hover::before {
+   }
+   
+   .home-button:hover::before {
     width: 100%;
-}
-
+   }

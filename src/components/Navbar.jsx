@@ -44,7 +44,7 @@ const Navbar = () => {
         <div className="md:hidden relative z-50" onClick={toggleMenu}>
           <button className="text-white focus:outline-none">
             <svg
-              className={`w-6 h-6 transition-transform transform ${isOpen ? 'rotate-90' : 'rotate-0'} ease-in-out duration-1000`}
+              className={`w-6 h-6 transition-transform transform ${isOpen ? 'rotate-180' : 'rotate-0'} ease-in-out duration-1000`}
               fill="none"
               stroke="currentColor"
               viewBox="0 0 24 24"
