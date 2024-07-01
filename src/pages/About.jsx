@@ -3,7 +3,7 @@ import {
   FaFileDownload,FaHtml5,FaCss3,FaBootstrap,FaGitAlt,FaGithub,FaReact,FaNpm,FaFigma,FaJava,FaWix} from "react-icons/fa";
 import { DiJavascript1, DiNodejs } from "react-icons/di";
 import {
-  SiTailwindcss,SiMysql,SiMongodb,SiCanva,SiPython,SiDjango,SiCplusplus,SiFirebase,SiTypescript,SiRedux,SiMaterialdesignicons,SiExpress,SiLatex,SiVite,} from "react-icons/si";
+  SiTailwindcss, SiYarn,SiMysql,SiMongodb,SiCanva,SiPython,SiDjango,SiCplusplus,SiFirebase,SiTypescript,SiRedux,SiMaterialdesignicons,SiExpress,SiLatex,SiVite,} from "react-icons/si";
 import { AiFillApi } from "react-icons/ai";
 import { CgCPlusPlus } from "react-icons/cg";
 import '../components/styles/About.css';
@@ -12,9 +12,9 @@ const About = () => {
   const skills = [
     ["MaterialUI", "Tailwind CSS", "Bootstrap","HTML", "CSS", "JavaScript"],
     ["Git", "GitHub", "NPM","React", "Redux", "TypeScript"],
-    ["Node.js", "MongoDB", "SQL","Java", "C", "C++"],
-    ["Latex", "REST APIs", "Vite","Wix Studio", "Figma", "Canva"],
-    ["Django", "Redux", "Firebase"],
+    ["Python", "Java", "C", "C++", "MongoDB", "SQL",],
+    ["Latex", "Yarn", "Vite","Wix Studio", "Figma", "Canva"],
+    [ "Node.js", "REST APIs", "Django", "Redux", "Firebase"],
   ];
 
   const skillsCarouselRef = useRef(null);
@@ -37,7 +37,7 @@ const About = () => {
   useEffect(() => {
     const interval = setInterval(() => {
       handleNext();
-    }, 3000); // Scroll every 3 seconds
+    }, 3000);
 
     return () => clearInterval(interval);
   }, []);
@@ -61,7 +61,7 @@ const About = () => {
 
   const SkillIcon = ({ skill }) => {
     const icons = {
-      "Node.js": <FaNpm />,MaterialUI: <SiMaterialdesignicons />,Canva: <SiCanva />,"Wix Studio": <FaWix />,"REST APIs": <AiFillApi />,SQL: <SiMysql />,HTML: <FaHtml5 />,CSS: <FaCss3 />,JavaScript: <DiJavascript1 />,Bootstrap: <FaBootstrap />,"Tailwind CSS": <SiTailwindcss />,"C++": <CgCPlusPlus />,React: <FaReact />,Git: <FaGitAlt />,GitHub: <FaGithub />,MongoDB: <SiMongodb />,Python: <SiPython />,Django: <SiDjango />,C: <SiCplusplus />,Firebase: <SiFirebase />,TypeScript: <SiTypescript />,Figma: <FaFigma />,Redux: <SiRedux />,Java: <FaJava />,"Node.js": <DiNodejs />,Express: <SiExpress />,Latex: <SiLatex />,Vite: <SiVite />, NPM: <FaNpm />
+      "Node.js": <FaNpm />,MaterialUI: <SiMaterialdesignicons />,Canva: <SiCanva />,"Wix Studio": <FaWix />,"REST APIs": <AiFillApi />,SQL: <SiMysql />,HTML: <FaHtml5 />,CSS: <FaCss3 />,JavaScript: <DiJavascript1 />,Bootstrap: <FaBootstrap />,"Tailwind CSS": <SiTailwindcss />,"C++": <CgCPlusPlus />,React: <FaReact />,Git: <FaGitAlt />,GitHub: <FaGithub />,MongoDB: <SiMongodb />,Python: <SiPython />,Django: <SiDjango />,C: <SiCplusplus />,Firebase: <SiFirebase />,TypeScript: <SiTypescript />,Figma: <FaFigma />,Redux: <SiRedux />,Java: <FaJava />,"Node.js": <DiNodejs />,Express: <SiExpress />,Latex: <SiLatex />,Vite: <SiVite />, NPM: <FaNpm />, Yarn: <SiYarn />,
     };
     return <div className="skill-icon text-4xl m-2">{icons[skill]}</div>;
   };
@@ -70,7 +70,7 @@ const About = () => {
     <div className="flex flex-col justify-center items-center px-2 sm:px-4 lg:px-8 pr-0 sm:pr-4 lg:pr-8 z-0">
       <section className="flex flex-col justify-center sm:justify-evenly items-center w-full">
         <div className="w-full md:w-2/3 font-medium text-sm md:text-lg leading-6 md:leading-8 tracking-wide mb-10">
-          <h1 className="text-2xl md:text-4xl font-semibold pb-10 text-center md:text-left">
+          <h1 className="text-2xl md:text-4xl font-semibold pb-10 text-center">
             Get to <b className="text-yellow-400">know</b> me!
           </h1>
           <p className="text-left">
@@ -84,7 +84,8 @@ const About = () => {
             <br />
             I am <b className="text-yellow-400">open</b> to new collaborations or work where I can contribute and grow. Feel free to connect with me, links are on the navigation bar.
             <br />
-            Apart from coding, I love to make Discord servers, design, and do photography in my spare time.
+            <br />
+            Apart from coding, I love to read novels, paint, design, and do photography in my spare time.
           </p>
           <button
             onClick={handleDownload}
@@ -94,8 +95,10 @@ const About = () => {
             <span className="absolute inset-0 bg-black opacity-0 transition-opacity duration-250"></span>
           </button>
         </div>
-        <div className="SkillsSection w-full max-w-screen-lg mx-auto p-2 sm:p-5 relative">
-          <h2 className="text-2xl font-semibold mb-4 text-center">My Skills</h2>
+        <div className="w-full md:w-2/3 font-medium text-sm md:text-lg leading-6 md:leading-8 tracking-wide mb-10">
+          <h1 className="text-2xl md:text-4xl font-semibold pb-10 text-center">
+            My <b className="text-yellow-400">Skills</b>
+          </h1>
           <div
             ref={skillsCarouselRef}
             className={`relative w-full flex flex-col justify-center items-center mb-4 ${isMobile ? 'overflow-x-auto scrollbar-hide' : ''}`}

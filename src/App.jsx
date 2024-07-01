@@ -32,7 +32,7 @@ function App() {
         <>
           <Navbar />
           <div className="pt-24 p-4">
-            <Suspense fallback={<div className='flex cursor-none justify-center items-center'><CustomLoader3 color="#fff" loading={true} size={150} /></div>}>
+            <Suspense fallback={<div className='flex cursor-none justify-center items-center'> . </div>}>
               <Routes>
                 <Route path="/" element={<Home />} />
                 <Route path="/about" element={<About />} />

@@ -21,18 +21,24 @@ const Projects = () => {
   ];
 
   return (
-    <div className="flex flex-wrap justify-center mr-4">
-      {projects.map((project, index) => (
-        <div key={index} className="flex justify-center mb-20 sm:mb-10 mt-0 w-full sm:w-1/2 lg:w-1/3">
-          <ProjectBox
-            title={project.title}
-            description={project.description}
-            imgSrc={project.imgSrc}
-            imgAlt={project.imgAlt}
-            projLink={project.projLink}
-          />
-        </div>
-      ))}
+    <div className="flex flex-col justify-center">
+      <div className="font-medium text-sm md:text-lg leading-6 md:leading-8 tracking-wide justify-center">
+        <h1 className="text-2xl md:text-4xl font-semibold pb-10 text-center">
+          My <b className="text-yellow-400">Projects</b>!</h1>
+      </div>
+      <div className="flex flex-wrap justify-center mr-4">
+        {projects.map((project, index) => (
+          <div key={index} className="flex justify-center mb-20 sm:mb-10 mt-0 w-full sm:w-1/2 lg:w-1/3">
+            <ProjectBox
+              title={project.title}
+              description={project.description}
+              imgSrc={project.imgSrc}
+              imgAlt={project.imgAlt}
+              projLink={project.projLink}
+            />
+          </div>
+        ))}
+      </div>
     </div>
   );
 };
