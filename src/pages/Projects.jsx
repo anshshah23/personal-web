@@ -2,15 +2,15 @@ import React from "react";
 import ProjectBox from "../components/ProjectBox"; // Adjust the path as needed
 import Noteng from "../images/Noteng.png";
 import Portfolio from "../images/Portfolio.png";
-import BookingApp from "../images/TravelBooking.png';
+import BookingApp from "../images/TravelBooking.png";
 const Projects = () => {
   const projects = [
     {
-      title: "Personal Portfolio",
-      description: "Welcome to my portfolio website, a showcase of my skills as a passionate full-stack web developer. Built with React and Tailwind CSS, this site features a modern, responsive interface designed for an exceptional user experience. Throughout its development, I honed my expertise in loading optimization, responsiveness, and custom styling, including custom scrollbars.",
-      imgSrc: Portfolio,
-      imgAlt: "Personal Portfolio Image",
-      projLink: "https://anshshah2303.vercel.app/",
+      title: "BookingApp",
+      description: 'We offer timely public transport access, reducing urban congestion and air pollution. Using public transport is often cheaper and faster, with no parking hassles, making city travel more pleasant and eco-friendly. I contributed to developing this website, which was a valuable learning experience for me. I learnt coding for the first time through this project.',
+      imgSrc: BookingApp,
+      imgAlt: "Hackathon Project Image",
+      projLink: "",
     },
     {
       title: "Noteng",
@@ -20,11 +20,11 @@ const Projects = () => {
       projLink: "https://noteng.vercel.app/",
     },
     {
-      title: "BookingApp",
-      description: 'We offer timely public transport access, reducing urban congestion and air pollution. Using public transport is often cheaper and faster, with no parking hassles, making city travel more pleasant and eco-friendly. I contributed to developing this website, which was a valuable learning experience for me.',
-      imgSrc: BookingApp,
-      imgAlt: "Hackathon Project Image",
-      projLink: "",
+      title: "Personal Portfolio",
+      description: "Welcome to my portfolio website, a showcase of my skills as a passionate full-stack web developer. Built with React and Tailwind CSS, this site features a modern, responsive interface designed for an exceptional user experience. Throughout its development, I honed my expertise in loading optimization, responsiveness, and custom styling, including custom scrollbars.",
+      imgSrc: Portfolio,
+      imgAlt: "Personal Portfolio Image",
+      projLink: "https://anshshah2303.vercel.app/",
     },
   ];
 
