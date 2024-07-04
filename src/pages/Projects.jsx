@@ -2,6 +2,7 @@ import React from "react";
 import ProjectBox from "../components/ProjectBox"; // Adjust the path as needed
 import Noteng from "../images/Noteng.png";
 import Portfolio from "../images/Portfolio.png";
+import BookingApp from "../images/TravelBooking.png';
 const Projects = () => {
   const projects = [
     {
@@ -17,6 +18,13 @@ const Projects = () => {
       imgSrc: Noteng,
       imgAlt: "Noteng Project Image",
       projLink: "https://noteng.vercel.app/",
+    },
+    {
+      title: "BookingApp",
+      description: 'We offer timely public transport access, reducing urban congestion and air pollution. Using public transport is often cheaper and faster, with no parking hassles, making city travel more pleasant and eco-friendly. I contributed to developing this website, which was a valuable learning experience for me.',
+      imgSrc: BookingApp,
+      imgAlt: "Hackathon Project Image",
+      projLink: "",
     },
   ];
 
