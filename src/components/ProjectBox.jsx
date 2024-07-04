@@ -7,7 +7,11 @@ const ProjectBox = ({ title, description, imgSrc, imgAlt, projLink }) => {
     <Card className="max-w-xs w-full flex flex-col items-center justify-between transform transition-transform duration-500 hover:scale-105 hover:shadow-2xl bg-black bg-opacity-40 border-none">
       <div>
         <div className="flex flex-col items-center p-4">
-          <img src={imgSrc} alt={imgAlt} className="w-64 h-64 object-contain" />
+          <a href={projLink}
+            target="_blank"
+            rel="noopener noreferrer">
+            <img src={imgSrc} alt={imgAlt} className="w-64 h-64 object-contain" />
+          </a>
           <h1 className="text-2xl text-white font-bold mb-2">{title}</h1>
           <p className="text-white mb-4">{description}</p>
         </div>

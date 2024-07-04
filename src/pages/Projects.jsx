@@ -3,14 +3,24 @@ import ProjectBox from "../components/ProjectBox"; // Adjust the path as needed
 import Noteng from "../images/Noteng.png";
 import Portfolio from "../images/Portfolio.png";
 import BookingApp from "../images/TravelBooking.png";
+import NeoTravel from "../images/NeoTravel.png";
+import RecipeGenerator from "../images/RecipeGenerator.png";
+
 const Projects = () => {
   const projects = [
     {
       title: "BookingApp",
-      description: 'We offer timely public transport access, reducing urban congestion and air pollution. Using public transport is often cheaper and faster, with no parking hassles, making city travel more pleasant and eco-friendly. I contributed to developing this website, which was a valuable learning experience for me. I learnt coding for the first time through this project.',
+      description: 'Made with HTML,CSS and JavaScript, me and my team worked on this for our first hackathon, with Ankit and Akash we participated in Taqneeq 2.0, a hackathon in NMIMS College, Mumbai. I contributed in the role of Node Backend developer while my teammates led Frontend, which was a valuable learning experience for me. I learnt coding for the first time through this project.',
       imgSrc: BookingApp,
       imgAlt: "Hackathon Project Image",
       projLink: "",
+    },
+    {
+      title: "NeoTravel",
+      description: "NeoTravel was a challenge posed by the TechNext Minithon at Thadomal Shahani College where we had to provide a seamless UI/UX Experience along with a glitchy and modernly styled website for travel, and car rentals. Our team approched this project with all our skills to achieve the 1ST POSITION, I contributed as the Frontend Developer for booking page of the website.",
+      imgSrc: NeoTravel,
+      imgAlt: "NeoTravel Project Image",
+      projLink: "https://neo-travels.vercel.app/",
     },
     {
       title: "Noteng",
@@ -26,6 +36,13 @@ const Projects = () => {
       imgAlt: "Personal Portfolio Image",
       projLink: "https://anshshah2303.vercel.app/",
     },
+    {
+      title: "Recipe Generator",
+      description: "Recipe Generator is a fun project I worked on to practice my React skills. This app generates random recipes using the Edamam API, allowing users to explore new dishes and ingredients. I developed this project to enhance my knowledge of API integration, state management, and React component lifecycle methods. Feel free to check it out!",
+      imgSrc: RecipeGenerator,
+      imgAlt: "Recipe Generator Project Image",
+      projLink: "https://recipegeneratorreactapp.onrender.com/",
+    }
   ];
 
   return (
