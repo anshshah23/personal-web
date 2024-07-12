@@ -36,7 +36,7 @@ const Navbar = () => {
   }, []);
 
   return (
-    <nav className={`p-3 w-full top-0 z-1000 ${isScrolled ? 'bg-black bg-opacity-60 shadow-lg' : 'bg-black bg-opacity-60'} ${isVisible ? '' : 'hidden'}`}>
+    <nav className={`p-3 w-full top-0 z-1000 bg-black bg-opacity-70 shadow-lg ${isVisible ? '' : 'hidden'}`}>
       <div className="container mx-auto flex flex-row justify-between items-center">
         <div className="relative z-50">
           <Logo />
