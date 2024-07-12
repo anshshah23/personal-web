@@ -1,6 +1,9 @@
 /* General Styles */
 .App {
-  background: linear-gradient(to bottom right, #4ade80, #172554);
+  position: relative;
+  background-image: 
+    linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.6)), /* Dark gradient overlay */
+    url(src/images/bgmax.jpg); /* Background image */
   background-attachment: fixed;
   background-size: cover;
   min-height: 100vh;
@@ -8,6 +11,7 @@
   color: white;
   overflow-x: hidden;
 }
+
 
 button {
   cursor: pointer;
