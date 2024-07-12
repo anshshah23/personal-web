@@ -60,7 +60,7 @@ const Navbar = () => {
           </button>
         </div>
         <div
-          className={`${isOpen ? 'fixed inset-y-0 right-0 w-full flex flex-col items-center justify-center bg-blue-950 z-80 transition-transform duration-1000 ease-in-out' : 'hidden md:flex md:flex-row md:justify-between md:items-center md:space-x-10'}`}
+          className={`${isOpen ? 'fixed inset-y-0 right-0 w-full flex flex-col items-center justify-center bg-slate-900 z-80 transition-transform duration-1000 ease-in-out' : 'hidden md:flex md:flex-row md:justify-between md:items-center md:space-x-10'}`}
         >
           <div>
             <ul className="flex flex-col font-bold md:flex-row justify-center items-center md:space-x-10">

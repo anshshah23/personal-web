@@ -2,8 +2,8 @@
 .App {
   position: relative;
   background-image: 
-    linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.6)), /* Dark gradient overlay */
-    url(bgmax.jpg); /* Background image */
+    linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.7)), /* Dark gradient overlay */
+    url(https://static.vecteezy.com/system/resources/previews/023/042/165/large_2x/minimal-gradient-background-with-flowing-lights-neon-colors-white-and-silver-glowing-shiny-sweeping-curving-smooth-design-8k-cinematic-generate-ai-free-photo.jpg); /* Background image */
   background-attachment: fixed;
   background-size: cover;
   min-height: 100vh;
@@ -81,7 +81,7 @@ button {
 @media screen and (max-width: 480px){
   
 ::-webkit-scrollbar {
-  display: block;
+  display: none;
   width: 6px;
 }
 }
