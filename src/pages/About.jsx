@@ -71,18 +71,18 @@ const About = () => {
       <section className="flex flex-col justify-center sm:justify-evenly items-center w-full">
         <div className="w-full md:w-2/3 font-medium text-sm md:text-lg leading-6 md:leading-8 tracking-wide mb-10">
           <h1 className="text-2xl md:text-4xl font-semibold pb-10 text-center">
-            Get to <b className="text-yellow-400">know</b> me!
+            Get to <b className="text-purple-400">know</b> me!
           </h1>
           <p className="text-left">
-            Hi, my name is <b className="text-yellow-400">Ansh Shah</b> and I am from Mumbai, India. I'm a <b className="text-yellow-400">Frontend Web Developer</b> and a Third-Year
-            student pursuing <b className="text-yellow-400">BTech in Computer Engineering</b>.
+            Hi, my name is <b className="text-purple-400">Ansh Shah</b> and I am from Mumbai, India. I'm a <b className="text-purple-400">Frontend Web Developer</b> and a Third-Year
+            student pursuing <b className="text-purple-400">BTech in Computer Engineering</b>.
             <br />
             <br />
             I love to create projects with beautiful designs and apply my own touch to them. You can check out some of my work in the projects
             section. Proficient in diverse technologies, seeking opportunities to innovate and contribute effectively to projects.
             <br />
             <br />
-            I am <b className="text-yellow-400">open</b> to new collaborations or work where I can contribute and grow. Feel free to connect with me, links are on the navigation bar.
+            I am <b className="text-purple-400">open</b> to new collaborations or work where I can contribute and grow. Feel free to connect with me, links are on the navigation bar.
             <br />
             <br />
             Apart from coding, I love to read novels, paint, design, and do photography in my spare time.
@@ -97,7 +97,7 @@ const About = () => {
         </div>
         <div className="w-full md:w-2/3 font-medium text-sm md:text-lg leading-6 md:leading-8 tracking-wide mb-10">
           <h1 className="text-2xl md:text-4xl font-semibold pb-10 text-center">
-            My <b className="text-yellow-400">Skills</b>
+            My <b className="text-purple-400">Skills</b>
           </h1>
           <div
             ref={skillsCarouselRef}

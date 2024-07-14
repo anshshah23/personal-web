@@ -57,7 +57,7 @@ const Projects = () => {
     <div className="flex flex-col justify-center">
       <div className="font-medium text-sm md:text-lg leading-6 md:leading-8 tracking-wide justify-center">
         <h1 className="text-2xl md:text-4xl font-semibold pb-10 text-center">
-          My <b className="text-yellow-400">Projects</b>!</h1>
+          My <b className="text-purple-400">Projects</b>!</h1>
       </div>
       <div className="flex flex-wrap justify-center mr-4">
         {projects.map((project, index) => (

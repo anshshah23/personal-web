@@ -11,7 +11,7 @@ const Home = () => {
       <div className="p-10 lg:w-1/2">
         <h1 className='text-2xl lg:text-5xl'>I'm </h1>
         <h1 className="text-4xl lg:text-8xl font-bold">
-          <span className="text-yellow-400">Ansh Shah</span>
+          <span className="text-purple-400">Ansh Shah</span>
         </h1>
         <Type />
         <div className="mt-8 flex flex-row pr-4">
