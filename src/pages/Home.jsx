@@ -1,7 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import Type from '../components/Type.jsx';
-import Profile from '../images/Profile.png';
+import Profile from '../images/Profile1.png';
 import { BsPerson } from 'react-icons/bs';
 import { CgPhone } from 'react-icons/cg';
 import '../components/styles/Home.css';
@@ -30,17 +30,6 @@ const Home = () => {
               Contact
               <CgPhone className="inline-block sm:ml-2" />
             </button>
-          </Link>
-        </div>
-      </div>
-      <div className="lg:w-1/2 mt-8 lg:mt-0">
-        <div>
-          <Link to="/about">
-            <img
-              className="w-64 h-64 lg:w-96 lg:h-96 transform transition-transform duration-500 hover:scale-110"
-              src={Profile}
-              alt="Profile"
-            />
           </Link>
         </div>
       </div>
