@@ -46,7 +46,7 @@ const Projects = () => {
     },
     {
       title: "Weather App",
-      description: "Created using the Rapid ''API's'' Visual Crossing Weather, this app provides real-time weather updates for any location worldwide. I developed this project to enhance my skills in API integration, asynchronous JavaScript, and data visualization. The app features a clean, user-friendly interface with detailed weather information, including temperature, humidity, and wind speed.",
+      description: "Created using the Rapid API's Visual Crossing Weather, this app provides real-time weather updates for any location worldwide. I developed this project to enhance my skills in API integration, asynchronous JavaScript, and data visualization. The app features a clean, user-friendly interface with detailed weather information, including temperature, humidity, and wind speed.",
       imgSrc: WeatherApp,
       imgAlt: "Weather App Project Image",
       projLink: "https://weather-app-byansh.vercel.app/",
