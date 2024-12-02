@@ -52,7 +52,7 @@ const About = () => {
 
   const handleDownload = () => {
     const link = document.createElement("a");
-    link.href = "https://drive.google.com/uc?export=download&id=1gh1Bvc4RnGiQPMu6kejUaXr53gLAlQ8b";
+    link.href = "https://drive.google.com/uc?export=download&id=14SVSVwtZ-jmlT8jr49MBGB3c-YKKjTV3";
     link.download = "Ansh_Shah_Resume.pdf";
     document.body.appendChild(link);
     link.click();
